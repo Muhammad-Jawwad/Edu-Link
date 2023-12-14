@@ -1,0 +1,115 @@
+.testwidget {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1);
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .quiz-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quiz-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .quiz-no {
+            font-size: 14px;
+            font-weight: normal;
+            // color: #666;
+        }
+    }
+
+    .quiz-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+
+        img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .no-of-questions {
+            font-size: 14px;
+            font-weight: bold;
+            color: gray;
+            // color: #888;
+            margin-bottom: 10px;
+        }
+
+        .start-quiz {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7451f8;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .start-quiz::before {
+            content: "Proceed";
+            display: inline-block;
+        }
+
+        .start-quiz:hover {
+            background-color: white;
+            color: #7451f8;
+            border-color: #7451f8;
+        }
+
+        .start-quiz:disabled {
+            background-color: rgb(4, 183, 4);
+            cursor: not-allowed;
+        }
+
+        .start-quiz:disabled::before {
+            content: "Completed";
+        }
+        .start-quiz:disabled:hover {
+            background-color: white;
+            color: rgb(4, 183, 4);
+            border-color: rgb(4, 183, 4);
+            
+        }
+
+        /* Add a focus style */
+        .start-quiz:focus {
+            box-shadow: 0 0 6px rgba(116, 81, 248, 0.8);
+        }
+    }
+}

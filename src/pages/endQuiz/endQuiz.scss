@@ -1,0 +1,74 @@
+// endQuiz.scss
+
+$primary-color: #7451f8;
+$secondary-color: #5a38d4;
+$background-color: #f4f4f8;
+$card-bg-color: #fff;
+
+.endQuiz {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $background-color;
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .card {
+        background-color: $card-bg-color;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+
+        .heading {
+            font-family: "Roboto", sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .subheading {
+            font-family: "Roboto", sans-serif;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .beginButton {
+            background-color: $primary-color;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-family: "Roboto", sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+
+        .loadingText {
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            max-width: 90%;
+        }
+    }
+}   

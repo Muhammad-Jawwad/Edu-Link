@@ -1,0 +1,55 @@
+.testHome {
+    display: flex;
+
+    .homeContainer {
+        flex: 6;
+
+        .beatLoader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .widgets {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+
+            .widgetWrapper {
+                width: 100%;
+            }
+        }
+
+        .charts {
+            padding: 20px;
+        }
+
+        .listContainer {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+
+            .listTitle {
+                font-weight: 500;
+                color: #555;
+                margin-bottom: 15px;
+            }
+        }
+
+        .noDataFoundMessage,
+        .categoryNotSelectedMessage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #555;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: auto auto;
+        }
+    }
+}

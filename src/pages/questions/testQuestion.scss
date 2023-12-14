@@ -1,0 +1,143 @@
+.test-question-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    /* Set minimum height to full viewport height */
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow: auto;
+}
+
+.card {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.option:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
+    color: #7451f8;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout for better vertical stacking */
+    align-items: center;
+    /* Center buttons horizontally */
+    margin-top: 20px;
+}
+
+.previousButton,
+.nextButton {
+    flex: 1; // Make both buttons take equal space
+    margin-right: 10px; // Add a margin between the buttons
+    width: 100%;
+    /* Make buttons take full width */
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #7451f8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: #5a38d4;
+        transform: scale(1.02);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.progress-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+.progress::-webkit-progress-value {
+    background-color: #7451f8;
+}
+
+.timer {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7451f8;
+    transition: color 0.3s;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 15%;
+    font-size: 24px;
+    color: #555;
+}

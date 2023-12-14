@@ -1,0 +1,45 @@
+// NotFoundPage.scss
+
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; // You can adjust the background color
+
+    .notFoundContainer {
+        background: #fff; // You can adjust the background color
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        .notFoundTitle {
+            font-size: 2rem;
+            color: #7451f8; // You can customize the title color
+        }
+
+        .notFoundMessage {
+            font-size: 1.2rem;
+            color: #666; // You can customize the message color
+            margin: 20px 0;
+        }
+
+        .loginButton {
+            display: inline-block;
+                padding: 12px 24px; // Larger button
+                background: #888; // Matching button color with the title
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease; // Added button scaling effect
+
+            &:hover {
+                background-color: #7451f8; // You can customize the button hover color
+                transform: scale(1.05); // Button scaling on hover for interaction
+            }
+        }
+    }
+}
